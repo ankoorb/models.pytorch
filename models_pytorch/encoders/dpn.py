@@ -7,7 +7,7 @@ from pretrainedmodels.models.dpn import DPN
 from pretrainedmodels.models.dpn import pretrained_settings
 
 
-class DPNEncorder(DPN):
+class DPNEncoder(DPN):
 
     def __init__(self, feature_blocks, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -52,7 +52,7 @@ class DPNEncorder(DPN):
 
 dpn_encoders = {
     'dpn68': {
-        'encoder': DPNEncorder,
+        'encoder': DPNEncoder,
         'out_shapes': (832, 704, 320, 144, 10),
         'pretrained_settings': pretrained_settings['dpn68'],
         'params': {
@@ -69,7 +69,7 @@ dpn_encoders = {
     },
 
     'dpn68b': {
-        'encoder': DPNEncorder,
+        'encoder': DPNEncoder,
         'out_shapes': (832, 704, 320, 144, 10),
         'pretrained_settings': pretrained_settings['dpn68b'],
         'params': {
@@ -87,7 +87,7 @@ dpn_encoders = {
     },
 
     'dpn92': {
-        'encoder': DPNEncorder,
+        'encoder': DPNEncoder,
         'out_shapes': (2688, 1552, 704, 336, 64),
         'pretrained_settings': pretrained_settings['dpn92'],
         'params': {
@@ -103,7 +103,7 @@ dpn_encoders = {
     },
 
     'dpn98': {
-        'encoder': DPNEncorder,
+        'encoder': DPNEncoder,
         'out_shapes': (2688, 1728, 768, 336, 96),
         'pretrained_settings': pretrained_settings['dpn98'],
         'params': {
@@ -119,7 +119,7 @@ dpn_encoders = {
     },
 
     'dpn107': {
-        'encoder': DPNEncorder,
+        'encoder': DPNEncoder,
         'out_shapes': (2688, 2432, 1152, 376, 128),
         'pretrained_settings': pretrained_settings['dpn107'],
         'params': {
@@ -135,7 +135,7 @@ dpn_encoders = {
     },
 
     'dpn131': {
-        'encoder': DPNEncorder,
+        'encoder': DPNEncoder,
         'out_shapes': (2688, 1984, 832, 352, 128),
         'pretrained_settings': pretrained_settings['dpn131'],
         'params': {
